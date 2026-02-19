@@ -1,5 +1,5 @@
 module.exports = {
-  layout: "base.njk",
+  layout: "pr-layout.njk",
   permalink: function(data) {
     return "/pr/" + data.page.fileSlug + "/index.html";
   }
