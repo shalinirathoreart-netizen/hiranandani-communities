@@ -2,6 +2,7 @@
 title: My PR Title
 description: bkljanskcbsakc ask
 external_link: https://www.issuewire.com/devika-group-from-building-landmarks-to-creating-legacy-1786508441534527
+image: /assets/uploads/banner1.png
 ---
 <!--StartFragment-->
 
