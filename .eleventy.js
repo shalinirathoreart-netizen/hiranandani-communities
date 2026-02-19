@@ -7,6 +7,10 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("content/blog/*.md");
   });
 
+  eleventyConfig.addCollection("pr", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("content/pr/*.md");
+  });
+
   return {
     dir: {
       input: ".",
