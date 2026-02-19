@@ -161,16 +161,28 @@
             }
         }
     </script>
-    <script>
+   <script>
   if (window.netlifyIdentity) {
+
     window.netlifyIdentity.on("init", function(user) {
+
+      // 🔥 Force recovery handling
       if (window.location.hash.includes("recovery_token")) {
-        window.netlifyIdentity.open("recovery");
+
+        // Open identity widget
+        window.netlifyIdentity.open();
+
+        // Small delay to ensure widget is ready
+        setTimeout(function() {
+          window.netlifyIdentity.open("recovery");
+        }, 500);
       }
+
     });
+
   }
 </script>
-
 </body>
 </html>
+
 
