@@ -6,15 +6,17 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
+
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-    - name: "pr"
+  - name: "pr"
     label: "PR"
     folder: "content/pr"
     create: true
