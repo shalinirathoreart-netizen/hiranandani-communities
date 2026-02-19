@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+</head>
+<body>
+
+  <nav>
+    <a href="/">Home</a> |
+    <a href="/blog/">Blog</a> |
+    <a href="/pr/">PR</a>
+  </nav>
+
+  <hr>
+
+  <h1>{{ title }}</h1>
+
+  <p>{{ description }}</p>
+
+  <p>
+    <a href="{{ external_link }}" target="_blank">
+      Read Original Press Release
+    </a>
+  </p>
+
+  <hr>
+
+  {{ content | safe }}
+
+</body>
+</html>
