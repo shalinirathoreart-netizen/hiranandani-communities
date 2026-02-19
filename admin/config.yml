@@ -2,28 +2,42 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: assets/uploads
+public_folder: /assets/uploads
 
 collections:
-
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: blog
+    label: Blog
+    folder: content/blog
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
 
-  - name: "pr"
-    label: "PR"
-    folder: "content/pr"
+  - name: pr
+    label: PR
+    folder: content/pr
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Short Description (30-40 words)", name: "description", widget: "text" }
-      - { label: "External PR Link", name: "external_link", widget: "string" }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Body (Optional)", name: "body", widget: "markdown", required: false }
+      - label: Title
+        name: title
+        widget: string
+      - label: Short Description (30-40 words)
+        name: description
+        widget: text
+      - label: External PR Link
+        name: external_link
+        widget: string
+      - label: Featured Image
+        name: image
+        widget: image
+      - label: Body (Optional)
+        name: body
+        widget: markdown
+        required: false
