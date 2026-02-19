@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: PR
+permalink: /pr/index.html
+---
+
+<h1>Press Releases</h1>
+
+<ul>
+{% for item in collections.pr %}
+  <li>
+    <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+    <p>{{ item.data.description }}</p>
+    <a href="{{ item.data.external_link }}" target="_blank">Read Full PR</a>
+  </li>
+{% endfor %}
+</ul>
