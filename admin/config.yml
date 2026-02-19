@@ -13,3 +13,14 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pr"
+    label: "PR"
+    folder: "content/pr"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short Description (30-40 words)", name: "description", widget: "text" }
+      - { label: "External PR Link", name: "external_link", widget: "string" }
+      - { label: "Body (Optional)", name: "body", widget: "markdown", required: false }
