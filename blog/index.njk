@@ -1,0 +1,43 @@
+---
+layout: base.njk
+pagination:
+  data: collections.blog
+  size: 5
+  reverse: true
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+---
+
+<section class="blog-header">
+  <h1>Latest Articles</h1>
+  <p>Explore our latest insights, updates, and expert perspectives.</p>
+</section>
+
+<section class="blog-list">
+  {% for post in pagination.items %}
+    <div class="blog-card">
+      {% if post.data.image %}
+        <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+      {% endif %}
+      
+      <h2>{{ post.data.title }}</h2>
+
+      <p class="excerpt">
+        {{ post.templateContent | striptags | truncate(180) }}
+      </p>
+
+      <a href="{{ post.url }}" class="read-btn">Read Full Blog</a>
+    </div>
+  {% endfor %}
+</section>
+
+<div class="pagination">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">← Previous</a>
+  {% endif %}
+
+  <span>Page {{ pagination.pageNumber + 1 }}</span>
+
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Next →</a>
+  {% endif %}
+</div>
