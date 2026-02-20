@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Title -->
+  <title>
+    {% if meta_title %}
+      {{ meta_title }}
+    {% else %}
+      {{ title }}
+    {% endif %}
+  </title>
+
+  <!-- Meta Description -->
+  {% if meta_description %}
+    <meta name="description" content="{{ meta_description }}">
+  {% endif %}
+
+  <!-- Meta Keywords -->
+  {% if meta_keywords %}
+    <meta name="keywords" content="{{ meta_keywords }}">
+  {% endif %}
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.7;
+    }
+
+    nav {
+      margin-bottom: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-right: 15px;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .blog-image {
+      width: 100%;
+      max-width: 700px;
+      height: 350px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 30px auto;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .meta-keywords {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .meta-keywords span {
+      font-weight: bold;
+    }
+
+    .blog-content p {
+      margin-bottom: 18px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .blog-content h2,
+    .blog-content h3 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    .blog-content img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .blog-image {
+        height: 250px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/pr/">PR</a>
+  </nav>
+
+  <!-- Featured Image -->
+  {% if image %}
+    <img src="{{ image }}" alt="{{ title }}" class="blog-image">
+  {% endif %}
+
+  <!-- Title -->
+  <h1>{{ title }}</h1>
+
+  <!-- Meta Keywords Display -->
+  {% if meta_keywords %}
+    <div class="meta-keywords">
+      <span>Keywords:</span> {{ meta_keywords }}
+    </div>
+  {% endif %}
+
+  <!-- Blog Content -->
+  <div class="blog-content">
+    {{ content | safe }}
+  </div>
+
+</body>
+</html>
