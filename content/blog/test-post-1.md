@@ -1,7 +1,7 @@
 ---
 title: Hiranandani Communities Projects - Everything You Should Know
 custom_slug: hiranandani-communities-projects-everything-you-should-know
-image: /assets/uploads/banner1.png
+image: /assets/uploads/top-5-reason-to-book-a-dandeli-resort-for-your-honeymoon.jpeg
 excerpt: Hiranandani Communities projects are widely recognized for redefining
   the concept of integrated township living in India. Unlike conventional
   residential developments that focus solely on housing, Hiranandani Communities
