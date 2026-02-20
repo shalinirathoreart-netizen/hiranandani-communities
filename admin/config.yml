@@ -6,7 +6,8 @@ media_folder: assets/uploads
 public_folder: /assets/uploads
 
 collections:
-   - name: blog
+
+  - name: blog
     label: Blog
     folder: content/blog
     create: true
@@ -16,22 +17,40 @@ collections:
         name: title
         widget: string
 
+      - label: Custom Slug
+        name: custom_slug
+        widget: string
+        required: false
+
       - label: Featured Image
         name: image
         widget: image
+        required: false
 
       - label: Excerpt (30 words)
         name: excerpt
         widget: text
+        required: false
 
-      - label: Category
-        name: category
+      - label: Meta Title
+        name: meta_title
+        widget: string
+        required: false
+
+      - label: Meta Description
+        name: meta_description
+        widget: text
+        required: false
+
+      - label: Meta Keywords
+        name: meta_keywords
         widget: string
         required: false
 
       - label: Body
         name: body
         widget: markdown
+
 
   - name: pr
     label: PR
@@ -42,15 +61,40 @@ collections:
       - label: Title
         name: title
         widget: string
-      - label: Short Description (30-40 words)
-        name: description
-        widget: text
-      - label: External PR Link
-        name: external_link
+
+      - label: Custom Slug
+        name: custom_slug
         widget: string
+        required: false
+
       - label: Featured Image
         name: image
         widget: image
+        required: false
+
+      - label: Short Description (30-40 words)
+        name: description
+        widget: text
+
+      - label: External PR Link
+        name: external_link
+        widget: string
+
+      - label: Meta Title
+        name: meta_title
+        widget: string
+        required: false
+
+      - label: Meta Description
+        name: meta_description
+        widget: text
+        required: false
+
+      - label: Meta Keywords
+        name: meta_keywords
+        widget: string
+        required: false
+
       - label: Body (Optional)
         name: body
         widget: markdown
