@@ -1,47 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Title -->
+  <title>
+    {% if meta_title %}
+      {{ meta_title }}
+    {% else %}
+      {{ title }}
+    {% endif %}
+  </title>
+
+  <!-- SEO Description -->
+  {% if meta_description %}
+    <meta name="description" content="{{ meta_description }}">
+  {% else %}
+    <meta name="description" content="{{ description }}">
+  {% endif %}
+
+  <!-- SEO Keywords -->
+  {% if meta_keywords %}
+    <meta name="keywords" content="{{ meta_keywords }}">
+  {% endif %}
 
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
     .pr-image {
-      width: 700px;
+      width: 100%;
+      max-width: 700px;
       height: 350px;
       object-fit: cover;
       display: block;
-      margin-bottom: 20px;
+      margin: 0 auto 25px auto;
+      border-radius: 8px;
     }
-  </style>
 
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    .description {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .external-link {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+
+    .external-link:hover {
+      background: #0056b3;
+    }
+
+    .content {
+      margin-top: 20px;
+    }
+
+  </style>
 </head>
+
 <body>
 
+  <!-- Navigation -->
   <nav>
-    <a href="/">Home</a> |
-    <a href="/blog/">Blog</a> |
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
     <a href="/pr/">PR</a>
   </nav>
 
-  <hr>
-
+  <!-- Featured Image -->
   {% if image %}
-  <img src="{{ image | url }}" alt="{{ title }}" class="pr-image">
-{% endif %}
+    <img src="{{ image | url }}" alt="{{ title }}" class="pr-image">
+  {% endif %}
 
+  <!-- Title -->
   <h1>{{ title }}</h1>
 
-  <p>{{ description }}</p>
+  <!-- Short Description -->
+  {% if description %}
+    <p class="description">{{ description }}</p>
+  {% endif %}
 
-  <p>
-    <a href="{{ external_link }}" target="_blank">
+  <!-- External Link Button -->
+  {% if external_link %}
+    <a href="{{ external_link }}" target="_blank" class="external-link">
       Read Original Press Release
     </a>
-  </p>
+  {% endif %}
 
-  <hr>
-
-  {{ content | safe }}
+  <!-- Optional Body Content -->
+  <div class="content">
+    {{ content | safe }}
+  </div>
 
 </body>
 </html>
