@@ -6,12 +6,59 @@ permalink: /pr/index.html
 
 <h1>Press Releases</h1>
 
-<ul>
-{% for item in collections.pr %}
-  <li>
-    <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+<div class="pr-list">
+
+{% for item in collections.pr | reverse %}
+
+  <div class="pr-card">
+
+    {% if item.data.image %}
+      <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="pr-card-image">
+    {% endif %}
+
+    <h2>
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
+    </h2>
+
     <p>{{ item.data.description }}</p>
-    <a href="{{ item.data.external_link }}" target="_blank">Read Full PR</a>
-  </li>
+
+    <a href="{{ item.url }}" class="read-more">View Details</a>
+
+  </div>
+
 {% endfor %}
-</ul>
+
+</div>
+
+<style>
+.pr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.pr-card {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+}
+
+.pr-card-image {
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #007bff;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+</style>
