@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ meta_title or title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="keywords" content="{{ meta_keywords }}">
+</head>
+<body>
+
+  {% if image %}
+    <img src="{{ image }}" alt="{{ title }}" style="max-width:700px; max-height:350px;">
+  {% endif %}
+
+  <h1>{{ title }}</h1>
+
+  <div class="content">
+    {{ content | safe }}
+  </div>
+
+</body>
+</html>
