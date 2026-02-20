@@ -6,47 +6,46 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: blog
+    label: Blog
+    folder: content/blog
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Custom Slug", name: "custom_slug", widget: "string", required: true }
-      - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
-      - { label: "Meta Description", name: "meta_description", widget: "text", required: false }
-      - { label: "Meta Keywords", name: "meta_keywords", widget: "string", required: false }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: Title, name: title, widget: string }
+      - { label: Custom Slug, name: custom_slug, widget: string, required: true }
+      - { label: Meta Title, name: meta_title, widget: string }
+      - { label: Meta Description, name: meta_description, widget: text }
+      - { label: Meta Keywords, name: meta_keywords, widget: string }
+      - { label: Featured Image, name: image, widget: image }
+      - { label: Body, name: body, widget: markdown }
 
-  - name: "pr"
-    label: "PR"
-    folder: "content/pr"
+  - name: pr
+    label: PR
+    folder: content/pr
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Custom Slug", name: "custom_slug", widget: "string", required: true }
-      - { label: "Short Description", name: "description", widget: "text" }
-      - { label: "External Link", name: "external_link", widget: "string" }
-      - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
-      - { label: "Meta Description", name: "meta_description", widget: "text", required: false }
-      - { label: "Meta Keywords", name: "meta_keywords", widget: "string", required: false }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: Title, name: title, widget: string }
+      - { label: Custom Slug, name: custom_slug, widget: string, required: true }
+      - { label: Short Description, name: description, widget: text }
+      - { label: External Link, name: external_link, widget: string }
+      - { label: Meta Title, name: meta_title, widget: string }
+      - { label: Meta Description, name: meta_description, widget: text }
+      - { label: Meta Keywords, name: meta_keywords, widget: string }
+      - { label: Featured Image, name: image, widget: image }
+      - { label: Body, name: body, widget: markdown, required: false }
 
-  - name: "pages"
-    label: "Pages"
-    folder: "content/pages"
+  - name: pages
+    label: Pages
+    folder: content/pages
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Page Title", name: "title", widget: "string" }
-      - { label: "Custom Slug", name: "custom_slug", widget: "string", required: true }
-      - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
-      - { label: "Meta Description", name: "meta_description", widget: "text", required: false }
-      - { label: "Meta Keywords", name: "meta_keywords", widget: "string", required: false }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: Page Title, name: title, widget: string }
+      - { label: Custom Slug, name: custom_slug, widget: string, required: true }
+      - { label: Meta Title, name: meta_title, widget: string }
+      - { label: Meta Description, name: meta_description, widget: text }
+      - { label: Meta Keywords, name: meta_keywords, widget: string }
+      - { label: Featured Image, name: image, widget: image }
+      - { label: Body, name: body, widget: markdown }
