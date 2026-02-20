@@ -1,6 +1,6 @@
 module.exports = {
-  layout: "base.njk",
+  layout: "blog-layout.njk",
   permalink: function(data) {
-    return "/blog/" + data.page.fileSlug + "/index.html";
+    return "/blog/" + (data.custom_slug || data.page.fileSlug) + "/index.html";
   }
 };
