@@ -1,12 +1,13 @@
 ---
 title: "Devika Group: From Building Landmarks To Creating Legacy"
+custom_slug: devika-group-from-building-landmarks-to-creating-legacy
+image: /assets/uploads/banner1.png
 description: Devika Group Sadar Bazar can be described as a project merging
   heritage with modern infrastructure. Devika Sadar Bazar Delhi was built in one
   of the oldest and busiest commercial areas in Delhi to counter the
   long-standing issues related to congestion, parking, and unstructured retail
   traffic.
 external_link: https://www.issuewire.com/devika-group-from-building-landmarks-to-creating-legacy-1786508441534527
-image: /assets/uploads/banner1.png
 ---
 <!--StartFragment-->
 
