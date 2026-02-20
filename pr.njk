@@ -4,25 +4,37 @@ title: PR
 permalink: /pr/index.html
 ---
 
-<h1>Press Releases</h1>
+<h1 class="pr-heading">Latest Press Releases</h1>
 
-<div class="pr-list">
+<div class="pr-wrapper">
 
 {% for item in collections.pr | reverse %}
 
   <div class="pr-card">
 
+    <!-- Featured Image -->
     {% if item.data.image %}
-      <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="pr-card-image">
+      <a href="{{ item.url }}">
+        <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="pr-image">
+      </a>
     {% endif %}
 
-    <h2>
+    <!-- Title -->
+    <h2 class="pr-title">
       <a href="{{ item.url }}">{{ item.data.title }}</a>
     </h2>
 
-    <p>{{ item.data.description }}</p>
+    <!-- Description -->
+    {% if item.data.description %}
+      <p class="pr-description">
+        {{ item.data.description }}
+      </p>
+    {% endif %}
 
-    <a href="{{ item.url }}" class="read-more">View Details</a>
+    <!-- Read Button -->
+    <a href="{{ item.url }}" class="read-btn">
+      Read Full PR
+    </a>
 
   </div>
 
@@ -30,35 +42,82 @@ permalink: /pr/index.html
 
 </div>
 
+
 <style>
-.pr-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+
+/* Wrapper */
+.pr-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Card spacing */
 .pr-card {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 30px;
+  margin-bottom: 60px;
 }
 
-.pr-card-image {
+/* Image */
+.pr-image {
   width: 100%;
   max-width: 700px;
   height: 350px;
   object-fit: cover;
+  border-radius: 10px;
   display: block;
-  margin-bottom: 15px;
-  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-.read-more {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  background: #007bff;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 5px;
+/* Title */
+.pr-title {
+  font-size: 30px;
+  margin-bottom: 15px;
 }
+
+.pr-title a {
+  text-decoration: none;
+  color: #111;
+}
+
+.pr-title a:hover {
+  color: #007bff;
+}
+
+/* Description */
+.pr-description {
+  max-width: 75%;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.read-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.read-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .pr-description {
+    max-width: 100%;
+  }
+
+  .pr-image {
+    height: 250px;
+  }
+
+}
+
 </style>
