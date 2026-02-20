@@ -26,8 +26,8 @@
   <hr>
 
   {% if image %}
-    <img src="{{ image }}" alt="{{ title }}" class="pr-image">
-  {% endif %}
+  <img src="{{ image | url }}" alt="{{ title }}" class="pr-image">
+{% endif %}
 
   <h1>{{ title }}</h1>
 
