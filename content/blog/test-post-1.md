@@ -8,6 +8,7 @@ excerpt: Hiranandani Communities projects are widely recognized for redefining
   builds large-scale ecosystems where homes, commercial spaces, schools,
   healthcare, and recreation coexist within a master-planned framework.
 meta_title: Hiranandani Communities Projects - Everything You Should Know
+meta_keywords: Hiranandani Projects, Hiranandani Communities, Hiranandani
 ---
 <!--StartFragment-->
 
