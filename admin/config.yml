@@ -99,3 +99,17 @@ collections:
         name: body
         widget: markdown
         required: false
+
+- name: "pages"
+  label: "Pages"
+  folder: "content/pages"
+  create: true
+  slug: "{{slug}}"
+  fields:
+    - { label: "Page Title", name: "title", widget: "string" }
+    - { label: "Custom Slug", name: "custom_slug", widget: "string", required: true }
+    - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+    - { label: "Meta Description", name: "meta_description", widget: "text", required: false }
+    - { label: "Meta Keywords", name: "meta_keywords", widget: "string", required: false }
+    - { label: "Featured Image", name: "image", widget: "image", required: false }
+    - { label: "Body", name: "body", widget: "markdown" }
