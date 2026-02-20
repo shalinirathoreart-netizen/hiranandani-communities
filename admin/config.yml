@@ -20,7 +20,7 @@ collections:
       - label: Custom Slug
         name: custom_slug
         widget: string
-        required: false
+        required: true
 
       - label: Featured Image
         name: image
