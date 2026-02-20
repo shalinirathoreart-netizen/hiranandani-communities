@@ -6,7 +6,7 @@ media_folder: assets/uploads
 public_folder: /assets/uploads
 
 collections:
-  - name: blog
+   - name: blog
     label: Blog
     folder: content/blog
     create: true
@@ -15,6 +15,20 @@ collections:
       - label: Title
         name: title
         widget: string
+
+      - label: Featured Image
+        name: image
+        widget: image
+
+      - label: Excerpt (30 words)
+        name: excerpt
+        widget: text
+
+      - label: Category
+        name: category
+        widget: string
+        required: false
+
       - label: Body
         name: body
         widget: markdown
